@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+	<div id="student"></div>
+	<script>
+		let d = document;
+		data = d.querySelector("#student");
+
+		let students = [
+			{name: "Ram Sharma", age: 12},
+			{name: "Shyam Gautam", age: 23},
+			{name: "Sita Shrestha", age: 21},
+			{name: "Gita Sharma", age: 32},
+			{name: "Hari Paudel", age: 22}
+		];
+
+		let content = '<table border="1" width="500">' + 
+							'<thead>' + 
+								'<tr>' + 
+									'<th>Name</th>' + 
+									'<th>Age</th>' + 
+								'</tr>' + 
+							'</thead>' + 
+							'<tbody id="student-data">';
+		for (i = 0; i < students.length; i++) {
+			content += "<tr>" +
+						"<td>" + students[i].name + "</td>" +
+						"<td>" + students[i].age + "</td>" +
+					 "</tr>";
+		}
+		content += '</tbody>' + '</table';
+
+		data.innerHTML = content;
+	</script>
+</body>
+</html>
